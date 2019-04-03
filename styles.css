@@ -9,13 +9,16 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 .logo {
-  position: absolute;
-  left: 50%;
-  top: 50vh;
+   top: 50vh;
+  width: 1024px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50vh;
 }
 
 @-webkit-keyframes flip {
@@ -113,4 +116,15 @@ body {
   backface-visibility: visible;
   -webkit-animation-name: flip;
   animation-name: flip;
+}
+
+footer {
+  position: absolute;
+  z-index: 10000;
+  bottom: 0;
+  color: #fff;
+  font-family: arial;
+  font-size: 13px;
+  width: 100%;
+  text-align: center; 
 }
