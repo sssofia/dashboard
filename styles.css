@@ -4,7 +4,7 @@ body {
 }
 
 .galaxy {
-  background: url(../images/galaxy.jpg);
+  background: url(images/galaxy.jpg);
   display: block;
   height: 100vh;
   padding: 0;
