@@ -1,9 +1,10 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.galaxy {
+body {
   background: url(images/galaxy.jpg);
   display: block;
   height: 100vh;
@@ -13,11 +14,17 @@ body {
   width: 100%;
 }
 
+header {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+}
+
 .main {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 40vh;
+  margin-top: 30px;
   max-width: 1024px;
 }
 
@@ -25,9 +32,9 @@ footer {
   position: absolute;
   z-index: 10000;
   bottom: 0;
-  color: #fff;
+  color: #757575;
   font-family: arial;
-  font-size: 13px;
+  font-size: 11px;
   width: 100%;
   text-align: center; 
 }
@@ -41,8 +48,7 @@ footer {
   height: 45px;
   background: transparent;
   color: #fff;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  text-align: center;  
   text-decoration: none;
   display: block;
   line-height: 45px;
@@ -56,4 +62,53 @@ footer {
   color: #333;
   transition: all 0.3s ease 0s; 
   -webkit-transition: all 0.3s ease 0s; 
+}
+
+.intro-text {
+  color: #fff;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  text-shadow: 3px 5px 2px #4747479e;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.intro-title {
+  font-size: 30px;
+  margin-bottom:15px;
+  color: #fff;
+  text-shadow: 3px 5px 2px #4747476e;
+
+}
+
+.intro-subtitle {
+  font-size: 20px;
+  margin-bottom:15px;
+  color: #fff;
+  text-shadow: 3px 5px 2px #4747479e;
+}
+
+@media (max-width: 767px) {
+  .avatar img {
+    width: 85px;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .intro-title {
+    font-size: 23px; 
+    margin-bottom: 5px; 
+  }
+
+  .intro-subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .intro-text {
+    font-size: 13px;
+  }
 }
