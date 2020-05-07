@@ -22,7 +22,7 @@ body {
     display: block;
 }
 
-.SandboxRoot.var-fully-expanded .timeline-Viewport {
+.twitter .SandboxRoot.var-fully-expanded .timeline-Viewport {
     overflow-y: scroll !important;
 }
 
