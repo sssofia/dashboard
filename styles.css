@@ -629,10 +629,6 @@ textarea {
         width: 92%;
         height: auto;
     }
-
-    .morning {
-        height: 440px;
-    }
 }
 
 @media (max-width: 414px) {
