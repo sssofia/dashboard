@@ -1,114 +1,739 @@
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
+a, a:focus {
+    color: #492a82;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #492a82;
+}
+
+html {
+    background: #F1F7FB;
 }
 
 body {
-  background: url(images/galaxy.jpg);
-  display: block;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  position: fixed;
-  width: 100%;
+    background: #F1F7FB;
+    padding: 20px;
+    height: auto !important;
+    color: #eee;
+    text-shadow: none;
+    padding-left: 10px;
+    box-shadow: none;
+    display: block;
+}
+
+.timeline-Widget {
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: auto;
+    max-height: 100%;
+    height: 700px;
+}
+
+.wrapper {
+    float: left;
+    width: 100%;
+    overflow-y: hidden;
+    height: 97vh;
 }
 
 header {
-  width: 100%;
-  text-align: center;
-  padding: 15px 0;
+    background: #535A73;
+    margin-left: -10px;
+    margin-right: -20px;
+    margin-top: -20px;
+    padding: 18px 15px 1px;
+    margin-bottom: 20px;
+    display: none;
 }
 
-.main {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 30px;
-  max-width: 1024px;
+.main-title {
+    font-family: 'Reenie Beanie', cursive;   
+    font-size: 34px; 
 }
 
-footer {
-  position: absolute;
-  z-index: 10000;
-  bottom: 0;
-  color: #757575;
-  font-family: arial;
-  font-size: 11px;
-  width: 100%;
-  text-align: center; 
+.main-title02 {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 34px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
 }
 
-.social-container a:first-child {
-  margin-right: 20px;
+.main-title img {
+    float: left;
+    margin-top: 12px;
+    margin-right: 10px;
 }
 
-.download-cv {
-  width: 200px;
-  height: 45px;
-  background: transparent;
-  color: #fff;
-  text-align: center;  
-  text-decoration: none;
-  display: block;
-  line-height: 45px;
-  border-radius: 25px;
-  margin: 15px auto;
-  border: 2px solid #fff;
+.module {
+    margin-bottom: 20px;
+    padding: 15px;
+    width: auto;
+    background: #fff;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    float: left;
+    margin-right: 14px;
+    height: auto;
 }
 
-.download-cv:hover {
-  background: #fff;
-  color: #333;
-  transition: all 0.3s ease 0s; 
-  -webkit-transition: all 0.3s ease 0s; 
+.module .content {
+    color: #989898;
 }
 
-.intro-text {
-  color: #fff;
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto;
-  text-shadow: 3px 5px 2px #4747479e;
-  padding: 0 15px;
-  font-size: 14px;
+.module-left {
+    float: left;
 }
 
-.intro-title {
-  font-size: 30px;
-  margin-bottom:15px;
-  color: #fff;
-  text-shadow: 3px 5px 2px #4747476e;
-
+.module-right {
+    float: right;
 }
 
-.intro-subtitle {
-  font-size: 20px;
-  margin-bottom:15px;
-  color: #fff;
-  text-shadow: 3px 5px 2px #4747479e;
+.module .title {
+    font-family: 'Reenie Beanie', cursive;
+    text-transform: capitalize;
+    font-size: 24px;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+    color: #333;
+    background: #F1F7FB;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 5px 8px 0 15px;
 }
 
-@media (max-width: 767px) {
-  .avatar img {
-    width: 85px;
+div[id^="chart"] {
+    width: 500px;
+    height: 300px;
   }
 
-  .main {
-    margin-top: 0;
+.group {
+    float: left;
+    width: 40%;
+    margin-right: 20px;
+}
+
+.group-sm {
+    float: left;
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 8px;
+    margin-right: 5px;
+}
+
+#view-selector-container {
+    display: none !important;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top: 6px;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #f1f7fb;
+    border: 1px solid #ccc;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #9497A8;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #535A73;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 
-  .intro-title {
-    font-size: 23px; 
-    margin-bottom: 5px; 
+  .module rect {
+      fill: #fff;
   }
 
-  .intro-subtitle {
-    font-size: 18px;
-    margin-bottom: 10px;
+  .module text {
+    fill: #eee;
+    text-shadow: none;
+    box-shadow: none;
+    stroke: none;
   }
 
-  .intro-text {
+  .module circle {
+      fill: #be79e4;
+  }
+
+  .module g rect {
+      fill: #ccc;
+  }
+
+  .module g path {
+    stroke: #8b50ab;
+  }
+
+  .module g text {
+      fill: #333;
+  }
+
+  .transparent {
+      background: transparent;
+      padding: 0;
+  }
+
+  .todolist-cont {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    overflow-y: auto;
+  }
+
+.todolist {
+    max-width: 320px;
+    width: 100%;
+}  
+
+.todolist ul {
+    margin: 0;
+    padding: 0;
+    height: 275px;
+    overflow-y: auto;
+}
+
+.todolist ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 35px 12px 15px;
+    background: #eee;
     font-size: 13px;
-  }
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style: none;
+    color: #333;
+    text-shadow: none;
+}
+
+.todolist ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.todolist ul li:hover {
+    background: #ddd;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.close {
+    display: none;
+}
+
+.todolist .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 16px 12px 16px;
+}
+
+.todolist .close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.todolist .header {
+    background-color: #BDD6DF;
+    padding: 2px;
+    color: white;
+    text-align: center;
+}
+
+.todolist .header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.todolist input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    outline: 0;
+}
+
+.todolist .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #bdd6e0;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: none;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.todolist .addBtn:hover {
+    background-color: #b3cad4;;
+}
+
+.goals li span {
+    display: none;
+}
+
+.calendar {
+    float: left;
+    background: #fff;
+    padding: 15px;
+    height: 415px;
+    overflow: hidden;
+    width: 97%;
+}
+
+.volatil-container {
+    float: left;
+    width: 600px;
+}
+
+.analytics {
+    float: left;
+    background: #fff;
+    padding: 15px;
+    height: 395px;
+    overflow: hidden;
+}
+
+.cat {
+    float: left;
+    width: 260px;
+    padding: 15px;
+    margin-left: 5%;
+}
+
+.list {
+    float: left;
+    width: 277px;
+}
+
+.sea {
+    float: left;
+    width: 222px;
+    margin-top: 10%;
+}
+
+.forest {
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100px;
+    margin: 40px auto 0;
+}
+
+.forest img {
+    margin-top: -4px;
+    width: 110px;
+    height: 110px;
+    margin-left: -5px;
+}
+
+.sea03 {
+    float: left;
+    width: 380px;
+    overflow: hidden;
+    height: 200px;
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+.sea03 img {
+    margin-top: -55px;
+}
+
+.sidebar {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background: #333;
+    margin-top: -20px;
+    margin-left: -15px;
+    margin-right: 20px;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 99999;
+}
+
+.main-content {
+    float: left;
+    margin-left: 200px;
+    width: auto;
+}
+
+.tracker  .title {
+    background: #f5eb93;
+}
+
+.todolist .title {
+    background: #BDD6DF;
+}
+
+.analytics .title {
+    background: #f7f0ce;
+}
+
+.calendar .title {
+    background: #e6e4e4;
+}
+
+.goals .title {
+    background: #EECED3;
+}
+
+.grateful .title {
+    background: #daf7ce;
+}
+
+.twitter .title {
+    background: #CBF5E9;
+}
+
+.morning .title {
+    background: #F7C594;
+}
+
+.schedule .title {
+    background: #c4bad6;
+}
+
+.sidebar ul {
+    color: #a7a7a7;
+    letter-spacing: 1px;
+    font-size: 12px;
+    float: left;
+    padding: 0 15px;
+}
+
+.sidebar ul li .close {
+    display: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    list-style: none;
+    text-align: center;
+}
+
+.morning {
+    height: auto;
+    float: left;
+    width: 360px;
+    background: #fff;
+    padding: 15px;
+}
+
+.morning .group-sm {
+    float: left;
+    width: auto;
+}
+
+.schedule {
+    height: auto;
+    float: left;
+    background: #fff;
+    padding: 15px;
+}
+
+td.time {
+    width: 90px;
+}
+
+td.day-title {
+    width: 50px;
+    text-align: center;
+    font-weight:bold;
+}
+
+td.activity {
+    width: 50px;
+    text-align: center;
+}
+
+.code-title {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.code-text {
+    font-weight:bold;
+}
+
+.code-text span {
+    font-weight: normal;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #eee;
+    text-align: left;
+    outline: 0;
+    height: auto;
+}
+
+.calendar-goals {
+    float: left;
+    width: 400px;
+}
+
+.grateful {
+    width: auto;
+    height: auto;
+}
+
+.twitter {
+    width: 360px;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.morning-grateful {
+    float: left;
+    width: 400px;
+}
+
+.posts iframe {
+    width: 700px;
+    height: 300px;
+}
+
+.goals {
+    height: auto;
+}
+
+.portion-type {
+    width: 100px;
+    float: left;
+    margin-top: 8px;
+}
+
+.portion-control input {
+    width: 45px;
+    height: 30px;
+    text-align: center;
+    background: #f1f7fb;
+    border: 1px solid #ccc;
+}
+
+.portion-content {
+    float: left;
+    margin: 0 7px 10px 0;
+}
+
+.habits-container {
+    float: left;
+    width: 215px;
+}
+
+@media (min-width: 1500px) {
+    .module {
+        margin-bottom: 35px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .morning-grateful {
+        float: left;
+        width: 345px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .module {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 0;
+    }
+
+    .morning-grateful {
+        float: left;
+        width: 235px;
+    }
+
+    .grateful {
+        width: 92%;
+        height: auto;
+    }
+
+    .morning {
+        height: 440px;
+    }
+}
+
+@media (max-width: 414px) {
+    .wrapper {
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sidebar {
+        height: auto;    
+        margin-left: -10px;    
+        width: 100%;
+        z-index: 10000;
+    }
+
+    .forest {
+        float: left;
+        margin: 18px;
+        width: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        height: 70px;
+        display: none;
+    }
+
+    .main-title02 {
+        font-size: 30px;
+        margin-top: 0;
+        width: auto;
+        padding-bottom: 0;
+    }
+
+    .sidebar ul {
+        display: none;
+    }
+
+    .main-content {
+        float: left;
+        margin-top: 55px;
+        width: 98%;
+        margin-left: 5px;
+    }
+
+    .module {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        width: 146px;
+        float: left;
+    }
+
+    .morning .group-sm {
+        float: left;
+        width: 135px;
+    }
+
+    .calendar,
+    .analytics  {
+        display: none;
+    }
+
+    .goals {
+        height: auto;
+    }
+
+    .forest img {
+        margin-top: 0;
+        width: 70px;
+        height: 70px;
+        margin-left: 0;
+    }
+
+    .morning-grateful {
+        float: left;
+        width: 100%;
+    }
+
+    .portion-type {
+        width: 89px;
+    }
+
+    .portion-control input {
+        margin-left: 5px;
+    }
+
+    .calendar-goals {
+        width: 100%;
+    }
+
+    .todolist {
+        max-width: 340px;
+    }
+
+    .twitter {
+        display: none;
+    }
 }
